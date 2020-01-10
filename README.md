@@ -31,4 +31,6 @@ Informações referentes ao desafio 3:
 # Desafio 4
 O quarto desafio é a criação de um algoritmmo que busca listar a quantidade mínima de moedas dado como entrada X, um valor de centavos a ser transformado e um vetor [Y1,Y2,...,YN] representando os possíveis valores de moedas, e no qual irá retornar um vetor de duplas, cujas duplas são a quantidades de moedas de cada moeda.
 Informações referentes ao desafio 4:
-(Em breve)
+Feito utilizando Python 3 mas provavelmente funciona com Python 2
+A entrada é composta de um valor de dinheiro x e uma listagem de moedas b.
+A saída é composta pela quantidade de moedas mínima para gerar o valor de dinheiro x, utilizando o padrão do desafio.
