@@ -26,11 +26,11 @@ Informações referentes ao desafio 2:
 O terceiro desafio é a criação de uma aplicação que que utiliza Javascript para deverá representar a entrada(avalição final de um filme) entre 0 e 5 e representar em estrelas de 3 tipos: Preenchida, preenchida na metade, e um quarto preenchida. Após isso, aplicar Testes utilizando TDD e BDD e criar uma interface React para demonstrar as estrelhas.
 A aplicação foi construida utilizando React e Javascript.
 Informações referentes ao desafio 3:
-(Em breve)
+Javascript executando a função direito pelo Console do Navegador, sem realizar os desafios opcionais.
 
 # Desafio 4
 O quarto desafio é a criação de um algoritmmo que busca listar a quantidade mínima de moedas dado como entrada X, um valor de centavos a ser transformado e um vetor [Y1,Y2,...,YN] representando os possíveis valores de moedas, e no qual irá retornar um vetor de duplas, cujas duplas são a quantidades de moedas de cada moeda.
 Informações referentes ao desafio 4:
-Feito utilizando Python 3 mas provavelmente funciona com Python 2
+Feito utilizando Python 3 mas provavelmente funciona com Python 2.
 A entrada é composta de um valor de dinheiro x e uma listagem de moedas b.
 A saída é composta pela quantidade de moedas mínima para gerar o valor de dinheiro x, utilizando o padrão do desafio.
