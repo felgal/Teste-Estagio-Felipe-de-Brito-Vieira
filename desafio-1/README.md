@@ -69,3 +69,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 Utilizando o básico, styled-components e react-spring.
+Usando Styled Icons: https://styled-icons.js.org/
