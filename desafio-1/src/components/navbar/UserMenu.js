@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import {Menu} from "styled-icons/boxicons-regular"
 
-class Pesquisa extends React.Component{
+import imgPerfil from '../../imagens/navbar/perfil.png';
+
+class UserMenu extends React.Component{
 	 constructor(){
         super();
 
@@ -22,57 +25,80 @@ class Pesquisa extends React.Component{
 	
 	render() {
 		return(
-			<Busca aberto={this.state.aberto}>
-				<IconePesquisa aberto={this.state.aberto} onClick={this.abrePesquisa}/>
-				<TextoPesquisa aberto={this.state.aberto} placeholder="Pesquisar termos na plataforma"/>
-				<IconeFechar aberto={this.state.aberto} onClick={this.fechaPesquisa}/>
-			</Busca> 
+			<AparenciaMenu aberto={this.state.aberto}>
+				<InformacoesUsuario>
+					<table>
+						<tr>
+							<th>
+								<Image src={imgPerfil} />
+							</th>
+							<th>
+								<TextoMenu>
+									Usuário teste
+								</TextoMenu>
+								<TextoCodigo>
+									016.672.131-05
+								</TextoCodigo>
+							</th>
+							<th>
+								<IconeMenu />
+							</th>
+						</tr>
+					</table>
+					
+				</InformacoesUsuario>
+			</AparenciaMenu> 
 		)
 	}
 }
 
-export default Pesquisa
+export default UserMenu
 
-
-export const TextoPesquisa = styled.input`
+export const IconeMenu = styled(Menu)`
+  max-width:37px;
   color: #28F3BD;
-  background: rgba(0, 0, 0, 0);
-  border: 0px;
-  font-size: 12px;
-  font: Regular 15px/24px Proxima Nova;
-  display: inline;
-  max-width: ${props => props.aberto ? "400px" : "0px"};
-  min-width: ${props => props.aberto ? "240px" : "0px"};
-  transition: max-width 0.3s,min-width 0.3s;
+  margin-left:55px;
 `;
 
-export const IconePesquisa = styled(Search)`
-  max-width:30px;
-  margin:8px;
-  &:hover{
-		color:#B5F7ED;
-  }
-  color: ${props => props.aberto ? "#B5F7ED" : "#456060"};
-    transition: all 0.3s;
-`;
-
-export const IconeFechar = styled(CloseCircle)`
-  color: #456060;
-  max-width:30px;
-  float:right
-  margin:8px;
-  display: none;
-  display: ${props => props.aberto ? "inline" : "none"};
-    transition: all 0.3s;
+const Image = styled.img`
+  max-height: 90%;
+  max-width: 90%;
+  float: left;
+  margin-right:15px;
 `;
 
 
-const Busca = styled.div`
-	float: right;
-	background: #344A4A 0% 0% no-repeat padding-box;
-	border-radius: 100px;
+const TextoMenu = styled.div`
+  color:#B5F7ED;
+  textAlign: center;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+`;
+  
+
+const TextoCodigo = styled.div`
+  color:#B5F7ED;
+  opacity:0.5;
+  text-align: center;
+  font-size: 11px;
+  fontWeight: Semibold;
+  letter-spacing:2.45px;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+`;
+
+
+const InformacoesUsuario = styled.div`
 	margin-top:auto;
+	textAlign: center;
 	margin-bottom:auto;
-	min-width: ${props => props.aberto ? "300px" : "10px"};
-    transition: all 0.3s;
+	min-width:200px;
+`
+
+const AparenciaMenu = styled.div`
+	padding-left: 20px;
+	padding-right: 30px;
+	display: flex;
+	margin-left: auto;
+	background: #1F2D2E 0% 0% no-repeat padding-box;
 `;

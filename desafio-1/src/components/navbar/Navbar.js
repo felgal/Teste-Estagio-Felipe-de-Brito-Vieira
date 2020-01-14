@@ -4,6 +4,7 @@ import { animated } from "react-spring";
 
 import Logo from './Logo';
 import Pesquisa from './Pesquisa';
+import UserMenu from './UserMenu';
 
 
 const Navbar = (props) => {
@@ -13,6 +14,7 @@ const Navbar = (props) => {
         <FlexContainer>
 			<Logo />
 			<Pesquisa />
+			<UserMenu />
         </FlexContainer>
       </NavBar>
    </>
@@ -33,7 +35,6 @@ const NavBar = styled(animated.nav)`
 const FlexContainer = styled.div`
   display: flex;
   margin: auto;
-  padding: 0 10px;
   height: 60px;
 `;
 

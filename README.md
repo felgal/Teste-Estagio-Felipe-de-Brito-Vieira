@@ -1,5 +1,5 @@
-# Teste Estagio Felipe de Brito Vieira
- Reposítorio contendo os desafios apresentados pelo teste de estágio.
+# Teste Estágio Felipe de Brito Vieira
+ Repositório contendo os desafios apresentados pelo teste de estágio.
 
 O teste contído nesse repositório é composto de quatro desafios, as informações relacionadas a cada desafio serão apresentadas abaixo:
 
