@@ -3,18 +3,14 @@
 
 O teste contído nesse repositório é composto de quatro desafios, as informações relacionadas a cada desafio serão apresentadas abaixo:
 
-# Informações referentes a todos os desafios
-Todos os códigos apresentados utilizam React e serão executados da seguinte maneira:
-(Em breve)
-Além disso, todos foram feitos utilizando:
-(Em breve)
-
 # Desafio 1
 O primeiro desafio é a Criação de uma interface Web que busca replicar a seguinte página web feita em Adobe XD:
 https://xd.adobe.com/view/dca6917e-2871-4d72-4797-3314f4b21b25-aa97/.
 A aplicação foi construida usando React.
 Informações referentes ao desafio 1:
-(Em breve)
+Feito em React
+Para executar o código, utilizar no cmd: npm start e abrir http://localhost:3000 para ver o conteúdo do site.
+Bibliotecas adicionais sendo usadas: Styled-components(https://styled-components.com/) e Styled Icons(https://styled-icons.js.org/)
 
 # Desafio 2
 O segundo desafio é a criação de uma aplicação que faz requisições Rest ao reqres.in e lista as informações através de uma interface qualquer. A documentação completa das requisições é https://reqres.in/.
