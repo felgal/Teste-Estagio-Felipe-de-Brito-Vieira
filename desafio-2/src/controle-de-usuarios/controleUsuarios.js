@@ -73,6 +73,31 @@ class ListagemUsuarios extends Component {
 			});
 	};
 	
+	//Função responsável por atualizar o usuário, no momento, precisa de melhoria pois envia o request com todas as informações do usuário(Por isso o PATCH é usado)
+	atualizaUsuario(infosUsuario){
+		var infosUsuarioBody= this.createData(infosUsuario.id,infosUsuario.email,infosUsuario.first_name,infosUsuario.last_name,infosUsuario.avatar)
+		console.log(JSON.stringify(infosUsuarioBody))
+		fetch("https://reqres.in/api/users/"+infosUsuario.id, {method: 'PATCH', headers: new Headers({'Accept': 'application/json, text/plain, */*','Content-Type': 'application/json'}), body: JSON.stringify(infosUsuarioBody)})
+	    .then((response) =>{
+			console.log("Requsição PATCH feita: https://reqres.in/api/users/"+infosUsuario.id);
+			console.log(response.status);
+			if (response.status !== 200) {
+				console.log("Erro no request");
+			} 
+			else 
+				//Maneira mais eficiente seria atualizar só esta página, mas ainda precisa ser feito
+				this.geraUsuariosNovos()
+				return (response.json());
+		})
+		//isso serve apenas para verificar a resposta do body
+		.then((responseJson) => {
+			console.log(responseJson);
+		})
+		.catch((error) => {
+			 console.log("Erro")
+			});
+	};
+	
 	
 	//função responsável por fazer a requisição para remover o usuário e gerar a nova listagem de usuários caso tenha sido removido com sucesso, senão apenas mostra o erro no console.
 	removeUsuario(idUsuario){
@@ -116,6 +141,23 @@ class ListagemUsuarios extends Component {
 				onClick: (event, rowData) => this.removeUsuario(rowData.id)
 			  }
 			]}
+			//código padrão dado pela documentação do material-table para permitir os valores serem editados
+			editable={{
+			  onRowUpdate: (newData, oldData) =>
+				new Promise((resolve, reject) => {
+				  setTimeout(() => {
+					{
+						//Outro ponto de melhoria, ele atualiza todas as informações do usuário, seria bom verificar quais foram as mudanças antes de fazer o request
+						this.atualizaUsuario(newData);
+						const data = this.state.usuariosMaterialTable;
+						const index = data.indexOf(oldData);
+						data[index] = newData;
+						this.setState(this.state.usuariosMaterialTable , () => resolve());
+					}
+					resolve()
+				  }, 1000)
+				}),
+			}}
 	  />  
 	 </div>
 	)
