@@ -21,9 +21,8 @@ const Navbar = (props) => {
   )
 }
 
-
+//position: fixed;
 const NavBar = styled(animated.nav)`
-  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
